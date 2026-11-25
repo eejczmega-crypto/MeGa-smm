@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MeGa SMM | متجر الترويج</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header><a class="logo" href="#">♛ MeGa <b>SMM</b></a><nav><a href="#services">الخدمات</a><a href="#order">اطلب خدمة</a><a href="#account">حسابي</a></nav><button class="btn ghost" id="authOpen">دخول / حساب جديد</button></header>
+<main>
+<section class="hero"><div><small>منصة عربية لخدمات الترويج</small><h1>خلّي حضورك<br><em>يوصل لناس أكتر</em></h1><p>اطلب حملات ترويج ومتابعة طلباتك من مكان واحد، بدون مشاركة كلمة مرور حسابك.</p><a class="btn" href="#services">استكشف الخدمات</a></div><div class="emblem"><span>♛</span><strong>MeGa</strong><b>SMM</b></div></section>
+<section id="services"><small>اختار منصتك</small><h2>خدماتنا</h2><div id="serviceGrid" class="grid"></div></section>
+<section id="order" class="panel"><div><small>ابدأ طلبك</small><h2>إنشاء طلب جديد</h2><p class="muted">سجّل الدخول، اختار الخدمة، وأرسل رابطاً عاماً.</p></div><form id="orderForm"><label>الخدمة<select id="service"></select></label><label>عدد الحملات<input id="quantity" type="number" min="1" max="10" value="1"></label><label>رابط الحساب أو المنشور<input id="target" type="url" placeholder="https://..." required></label><label>ملاحظات<input id="notes" maxlength="500"></label><button class="btn">إرسال الطلب</button></form></section>
+<section id="account" class="panel"><div><small>منطقة العميل</small><h2>حسابي وطلباتي</h2><p id="accountInfo" class="muted">سجّل الدخول لعرض حسابك.</p><button class="btn ghost" id="refresh">تحديث</button></div><div id="orders" class="orders">لا توجد طلبات.</div></section>
+<section class="panel"><div><small>المحفظة</small><h2>طلب شحن رصيد</h2><p class="muted">الشحن يدوي بعد مراجعة التحويل.</p></div><form id="topup"><label>المبلغ بالجنيه<input id="amount" type="number" min="50" max="10000" required></label><label>طريقة الدفع<input id="method" placeholder="محفظة / تحويل بنكي" required></label><label>رقم العملية<input id="reference" required></label><button class="btn">إرسال طلب الشحن</button></form></section>
+<footer>© 2026 MeGa SMM — متجر عربي لخدمات الترويج</footer>
+</main>
+<div class="modal" id="modal"><div class="modalbox"><button class="close" id="close">×</button><h2>حساب MeGa SMM</h2><div class="tabs"><button id="loginTab" class="selected">دخول</button><button id="registerTab">حساب جديد</button></div><form id="authForm"><label id="nameRow" class="hide">الاسم<input id="name"></label><label>البريد الإلكتروني<input id="email" type="email" required></label><label>كلمة المرور<input id="password" type="password" minlength="10" required></label><button class="btn">متابعة</button></form></div></div><div id="toast"></div><script src="app.js"></script>
+</body></html>
